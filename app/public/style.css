@@ -48,6 +48,7 @@ body {
     padding: 7px 14px;
     border-radius: 5px;
     cursor: pointer;    
+    outline: none;
 }
 
 .tweet-btn:hover {
