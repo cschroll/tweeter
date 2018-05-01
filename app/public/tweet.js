@@ -1,7 +1,7 @@
 $.ajax({
-        type: "GET",
-        url:"/ajax",
-        success: function(data) {
+    type: "GET",
+    url:"/ajax",
+    success: function(data) {
         for (var i = 0; i < data.tweets.length; i++) {
             appendNewTweet(data.tweets[i]);
         }
@@ -19,11 +19,11 @@ function appendNewTweet(tweet) {
   
 $('#tweet').click(function() {
     $.ajax({
-            type: "POST",
-            url: "/ajax",
-            contentType: 'application/json',
-            data: JSON.stringify({tweet: $('#new-tweet').val()}),
-            success: function(data) {
+        type: "POST",
+        url: "/ajax",
+        contentType: 'application/json',
+        data: JSON.stringify({tweet: $('#new-tweet').val()}),
+        success: function(data) {
             appendNewTweet(data);
             $('#new-tweet').val('');
         }
